@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EF8BE4854E7206EFECFC089 /* Pods_CryptoCompare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DA7384447FF3828FD93DE2 /* Pods_CryptoCompare.framework */; };
+		746BCF17CE70F164D80F6F0B /* Pods_CryptoCompare_CryptoCompareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B402308B8D7C5DDC5D64623 /* Pods_CryptoCompare_CryptoCompareUITests.framework */; };
+		7EB933AC543A6A1AF2C1096B /* Pods_CryptoCompare_CryptoCompareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB00E6BBD4EEBAB1C4517687 /* Pods_CryptoCompare_CryptoCompareTests.framework */; };
 		B89CBF86219ECC0A00E9583C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89CBF85219ECC0A00E9583C /* AppDelegate.swift */; };
 		B89CBF88219ECC0A00E9583C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89CBF87219ECC0A00E9583C /* ViewController.swift */; };
 		B89CBF8B219ECC0A00E9583C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89CBF89219ECC0A00E9583C /* Main.storyboard */; };
@@ -34,6 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F6167CE07B888F1D70C7858 /* Pods-CryptoCompare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCompare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoCompare/Pods-CryptoCompare.debug.xcconfig"; sourceTree = "<group>"; };
+		582AE352032D09ED136E3915 /* Pods-CryptoCompare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCompare.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoCompare/Pods-CryptoCompare.release.xcconfig"; sourceTree = "<group>"; };
+		5B402308B8D7C5DDC5D64623 /* Pods_CryptoCompare_CryptoCompareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoCompare_CryptoCompareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E4FA2E0C7379CD669C3FC52 /* Pods-CryptoCompare-CryptoCompareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCompare-CryptoCompareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoCompare-CryptoCompareUITests/Pods-CryptoCompare-CryptoCompareUITests.release.xcconfig"; sourceTree = "<group>"; };
+		62DA7384447FF3828FD93DE2 /* Pods_CryptoCompare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoCompare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8521A9B9A07C372C7A8D0343 /* Pods-CryptoCompare-CryptoCompareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCompare-CryptoCompareUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoCompare-CryptoCompareUITests/Pods-CryptoCompare-CryptoCompareUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C91B6F3436A2FAD0EB9777D /* Pods-CryptoCompare-CryptoCompareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCompare-CryptoCompareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoCompare-CryptoCompareTests/Pods-CryptoCompare-CryptoCompareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AB00E6BBD4EEBAB1C4517687 /* Pods_CryptoCompare_CryptoCompareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoCompare_CryptoCompareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEE053E7161E3AC3B678010F /* Pods-CryptoCompare-CryptoCompareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCompare-CryptoCompareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoCompare-CryptoCompareTests/Pods-CryptoCompare-CryptoCompareTests.release.xcconfig"; sourceTree = "<group>"; };
 		B89CBF82219ECC0A00E9583C /* CryptoCompare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCompare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89CBF85219ECC0A00E9583C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B89CBF87219ECC0A00E9583C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EF8BE4854E7206EFECFC089 /* Pods_CryptoCompare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EB933AC543A6A1AF2C1096B /* Pods_CryptoCompare_CryptoCompareTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746BCF17CE70F164D80F6F0B /* Pods_CryptoCompare_CryptoCompareUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B9272B0B32F08E62FA0BD86 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F6167CE07B888F1D70C7858 /* Pods-CryptoCompare.debug.xcconfig */,
+				582AE352032D09ED136E3915 /* Pods-CryptoCompare.release.xcconfig */,
+				9C91B6F3436A2FAD0EB9777D /* Pods-CryptoCompare-CryptoCompareTests.debug.xcconfig */,
+				AEE053E7161E3AC3B678010F /* Pods-CryptoCompare-CryptoCompareTests.release.xcconfig */,
+				8521A9B9A07C372C7A8D0343 /* Pods-CryptoCompare-CryptoCompareUITests.debug.xcconfig */,
+				5E4FA2E0C7379CD669C3FC52 /* Pods-CryptoCompare-CryptoCompareUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B89CBF79219ECC0A00E9583C = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				B89CBF99219ECC0B00E9583C /* CryptoCompareTests */,
 				B89CBFA4219ECC0B00E9583C /* CryptoCompareUITests */,
 				B89CBF83219ECC0A00E9583C /* Products */,
+				8B9272B0B32F08E62FA0BD86 /* Pods */,
+				E85B34BE9BE8B18FF51E9478 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +155,16 @@
 			path = CryptoCompareUITests;
 			sourceTree = "<group>";
 		};
+		E85B34BE9BE8B18FF51E9478 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62DA7384447FF3828FD93DE2 /* Pods_CryptoCompare.framework */,
+				AB00E6BBD4EEBAB1C4517687 /* Pods_CryptoCompare_CryptoCompareTests.framework */,
+				5B402308B8D7C5DDC5D64623 /* Pods_CryptoCompare_CryptoCompareUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +172,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B89CBFAA219ECC0B00E9583C /* Build configuration list for PBXNativeTarget "CryptoCompare" */;
 			buildPhases = (
+				6AC32C6629C031B1D0CCC5B4 /* [CP] Check Pods Manifest.lock */,
 				B89CBF7E219ECC0A00E9583C /* Sources */,
 				B89CBF7F219ECC0A00E9583C /* Frameworks */,
 				B89CBF80219ECC0A00E9583C /* Resources */,
@@ -149,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B89CBFAD219ECC0B00E9583C /* Build configuration list for PBXNativeTarget "CryptoCompareTests" */;
 			buildPhases = (
+				FA3A73C58807491B0B37CA22 /* [CP] Check Pods Manifest.lock */,
 				B89CBF92219ECC0B00E9583C /* Sources */,
 				B89CBF93219ECC0B00E9583C /* Frameworks */,
 				B89CBF94219ECC0B00E9583C /* Resources */,
+				1BF43E1A271B5E8DF3935BEB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B89CBFB0219ECC0B00E9583C /* Build configuration list for PBXNativeTarget "CryptoCompareUITests" */;
 			buildPhases = (
+				DEB9FFA92C5FA99A4E3A5A05 /* [CP] Check Pods Manifest.lock */,
 				B89CBF9D219ECC0B00E9583C /* Sources */,
 				B89CBF9E219ECC0B00E9583C /* Frameworks */,
 				B89CBF9F219ECC0B00E9583C /* Resources */,
+				65BAB1833881F989106BA13D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +295,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BF43E1A271B5E8DF3935BEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CryptoCompare-CryptoCompareTests/Pods-CryptoCompare-CryptoCompareTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptoCompare-CryptoCompareTests/Pods-CryptoCompare-CryptoCompareTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65BAB1833881F989106BA13D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CryptoCompare-CryptoCompareUITests/Pods-CryptoCompare-CryptoCompareUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptoCompare-CryptoCompareUITests/Pods-CryptoCompare-CryptoCompareUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AC32C6629C031B1D0CCC5B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoCompare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEB9FFA92C5FA99A4E3A5A05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoCompare-CryptoCompareUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA3A73C58807491B0B37CA22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoCompare-CryptoCompareTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B89CBF7E219ECC0A00E9583C /* Sources */ = {
@@ -430,7 +578,9 @@
 		};
 		B89CBFAB219ECC0B00E9583C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F6167CE07B888F1D70C7858 /* Pods-CryptoCompare.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J98FW8N44Z;
@@ -448,7 +598,9 @@
 		};
 		B89CBFAC219ECC0B00E9583C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 582AE352032D09ED136E3915 /* Pods-CryptoCompare.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J98FW8N44Z;
@@ -466,8 +618,9 @@
 		};
 		B89CBFAE219ECC0B00E9583C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C91B6F3436A2FAD0EB9777D /* Pods-CryptoCompare-CryptoCompareTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J98FW8N44Z;
@@ -487,8 +640,9 @@
 		};
 		B89CBFAF219ECC0B00E9583C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEE053E7161E3AC3B678010F /* Pods-CryptoCompare-CryptoCompareTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J98FW8N44Z;
@@ -508,8 +662,9 @@
 		};
 		B89CBFB1219ECC0B00E9583C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8521A9B9A07C372C7A8D0343 /* Pods-CryptoCompare-CryptoCompareUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J98FW8N44Z;
 				INFOPLIST_FILE = CryptoCompareUITests/Info.plist;
@@ -528,8 +683,9 @@
 		};
 		B89CBFB2219ECC0B00E9583C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E4FA2E0C7379CD669C3FC52 /* Pods-CryptoCompare-CryptoCompareUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J98FW8N44Z;
 				INFOPLIST_FILE = CryptoCompareUITests/Info.plist;
