@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2336DA0C63114ED51A1ED1693FD5D005"
+               BlueprintIdentifier = "7CFDF848BEB01AEB49A56FE58A462C34"
                BuildableName = "Pods_CryptoCompare_CryptoCompareTests.framework"
                BlueprintName = "Pods-CryptoCompare-CryptoCompareTests"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2336DA0C63114ED51A1ED1693FD5D005"
+            BlueprintIdentifier = "7CFDF848BEB01AEB49A56FE58A462C34"
             BuildableName = "Pods_CryptoCompare_CryptoCompareTests.framework"
             BlueprintName = "Pods-CryptoCompare-CryptoCompareTests"
             ReferencedContainer = "container:Pods.xcodeproj">
