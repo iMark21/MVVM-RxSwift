@@ -8,9 +8,41 @@
 
 import UIKit
 
-class CryptoListCoordinator: CryptoListCoordinatorProtocol{
+protocol CryptoListCoordinatorDelegate: class{
+    func listCoordinatorDidFinish()
+}
+
+class CryptoListCoordinator: CoordinatorProtocol {
     
-    func start(){
+    let navigationController: UINavigationController
+    weak var delegate: CryptoListCoordinatorDelegate?
+
+    
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+    
+    func start() {
+        showCryptoList()
+    }
+    
+    func showCryptoList() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CryptoListViewController") as? CryptoListViewController
+        if let viewcontroller = vc {
+            let viewModel =  CryptoListViewModel()
+            viewcontroller.viewModel = viewModel
+            navigationController.pushViewController(viewcontroller, animated: true)
+        }
+    }
+    
+    func showDetail() {
+        
+    }
+}
+
+extension CryptoListCoordinator: CryptoListCoordinatorDelegate {
+    func listCoordinatorDidFinish() {
         
     }
 }

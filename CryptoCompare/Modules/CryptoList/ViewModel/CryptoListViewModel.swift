@@ -16,27 +16,18 @@ class CryptoListViewModel{
     
     let disposeBag = DisposeBag()
     
-    //var data = Variable<[Currency]>([])
+    var data = Variable<[CryptoCurrency]>([])
     
     func requestData(){
-        RxAlamofire.requestJSON(.get, "").subscribe(onNext: { (json) in
-            
-        }, onError: { (error) in
-            
-        }, onCompleted: {
+        RxAlamofire.requestJSON(.get, Constants.API.baseUrl + Constants.API.Version.v1 + Constants.API.EndPoint.allTicker)
+            .subscribe(onNext: { (_, json) in
+                if let dict = json as? [[String: Any]] {
+                    let data = Mapper<CryptoCurrency>().mapArray(JSONArray: dict)
+                    self.data.value = data
+                }
+        },onError: { (error) in
             
         }).disposed(by: disposeBag)
-        
-        
-//        RxAlamofire.requestJSON(.get, C.API.URLString)
-//            .subscribe(onNext: { (r, json) in
-//                if let dict = json as? [[String: Any]] {
-//                    let data = Mapper<Currency>().mapArray(JSONArray: dict)
-//                    self.data.value = data
-//                }
-//            }, onError: { (error) in
-//                print(error)
-//            }).disposed(by: disposeBag)
     }
     
 }

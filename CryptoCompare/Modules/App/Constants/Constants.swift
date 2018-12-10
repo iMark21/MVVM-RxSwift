@@ -10,9 +10,9 @@ import Foundation
 
 struct Constants {
     struct API {
-        static let BaseURL = "https://api.coinmarketcap.com/"
+        static let baseUrl = "https://api.coinmarketcap.com/"
         struct Version {
-            static let V1 = "v1/"
+            static let v1 = "v1/"
         }
         struct EndPoint {
             static let allTicker = "ticker/"

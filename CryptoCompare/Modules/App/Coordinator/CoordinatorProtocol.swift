@@ -1,5 +1,5 @@
 //
-//  CryptoListCoordinatorProtocol.swift
+//  Coordinator.swift
 //  CryptoCompare
 //
 //  Created by Juan Miguel Marques Morilla on 07/12/2018.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol CryptoListCoordinatorProtocol: class{
+protocol CoordinatorProtocol: class{
     func start()
 }
