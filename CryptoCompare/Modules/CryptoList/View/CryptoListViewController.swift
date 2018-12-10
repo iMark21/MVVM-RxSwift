@@ -9,36 +9,43 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import PKHUD
 
-class CryptoListViewController: GenericViewController {
+class CryptoListViewController: BaseViewController {
     
     @IBOutlet weak var tableView:UITableView!
     
     var viewModel = CryptoListViewModel()
-    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewModel()
     }
     
-    func setupViewModel(){
+    override func setupViewModel() {
+        super.setupViewModel()
+        
+        let isLoading = viewModel.isLoading.asObservable()
+        let error = viewModel.error.asObservable()
+        
+        isLoading.subscribe(onNext: { (loading) in
+            self.setLoadingHud(visible: loading)
+        }).disposed(by: disposeBag)
+        
         viewModel.data.asObservable()
             .bind(to: tableView.rx.items(cellIdentifier: "UITableViewCell", cellType: UITableViewCell.self)) {
                 (row, crypto, cell) in
                 cell.textLabel?.text = crypto.name
                 cell.detailTextLabel?.text = crypto.priceUsd
-            }
-            .disposed(by: disposeBag)
+            }.disposed(by: disposeBag)
         
         viewModel.requestData()
         
         tableView.rx
             .modelSelected(CryptoCurrency.self)
             .subscribe(onNext: { (value) in
-                print ("show next \(value)")
-            })
-            .disposed(by: disposeBag)
+                print ("show next \(String(describing: value.name))")
+            }).disposed(by: disposeBag)
 
     }
     

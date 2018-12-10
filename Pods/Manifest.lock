@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.8.0)
   - ObjectMapper (3.4.1)
+  - PKHUD (5.2.0)
   - RxAlamofire (4.3.0):
     - RxAlamofire/Core (= 4.3.0)
   - RxAlamofire/Core (4.3.0):
@@ -15,6 +16,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - ObjectMapper
+  - PKHUD (~> 5.0)
   - RxAlamofire
   - RxCocoa
   - RxSwift
@@ -23,6 +25,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - ObjectMapper
+    - PKHUD
     - RxAlamofire
     - RxAtomic
     - RxCocoa
@@ -31,11 +34,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   ObjectMapper: 5311bd50ca732930959e7ca1a2de43ab823a5ced
+  PKHUD: dd5357ac65f26115c35c4a68e9b328053326c5fe
   RxAlamofire: 09624d0f2d48ed8b686e4eb4cf68e28cbd2df556
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
 
-PODFILE CHECKSUM: cf05477b166c97f09b52e64f46d86a38413dd2e5
+PODFILE CHECKSUM: f012ae80d0f8c083ccdc3474d2ef265b9cfad179
 
 COCOAPODS: 1.5.3

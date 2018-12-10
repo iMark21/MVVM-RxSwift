@@ -13,12 +13,13 @@
 		B818CECD21BAD30600332619 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818CECC21BAD30600332619 /* CoordinatorProtocol.swift */; };
 		B818CECF21BAD31000332619 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818CECE21BAD31000332619 /* AppCoordinator.swift */; };
 		B818CED421BAD49200332619 /* CryptoListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818CED321BAD49200332619 /* CryptoListCoordinator.swift */; };
-		B818CEDA21BAD66200332619 /* GenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818CED921BAD66200332619 /* GenericViewController.swift */; };
+		B818CEDA21BAD66200332619 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818CED921BAD66200332619 /* BaseViewController.swift */; };
 		B818CEDC21BAD67D00332619 /* CryptoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818CEDB21BAD67D00332619 /* CryptoListViewController.swift */; };
 		B818CEDE21BAD6D300332619 /* CryptoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818CEDD21BAD6D300332619 /* CryptoListViewModel.swift */; };
 		B818CEE021BADA7600332619 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818CEDF21BADA7600332619 /* CryptoCurrency.swift */; };
 		B818CEE321BADCFC00332619 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818CEE221BADCFC00332619 /* Constants.swift */; };
 		B899376221BE8504004AFA55 /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B899376121BE8504004AFA55 /* CryptoTableViewCell.swift */; };
+		B899376421BE8F1A004AFA55 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B899376321BE8F1A004AFA55 /* BaseViewModel.swift */; };
 		B89CBF86219ECC0A00E9583C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89CBF85219ECC0A00E9583C /* AppDelegate.swift */; };
 		B89CBF8B219ECC0A00E9583C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89CBF89219ECC0A00E9583C /* Main.storyboard */; };
 		B89CBF8D219ECC0B00E9583C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89CBF8C219ECC0B00E9583C /* Assets.xcassets */; };
@@ -57,12 +58,13 @@
 		B818CECC21BAD30600332619 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		B818CECE21BAD31000332619 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B818CED321BAD49200332619 /* CryptoListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListCoordinator.swift; sourceTree = "<group>"; };
-		B818CED921BAD66200332619 /* GenericViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewController.swift; sourceTree = "<group>"; };
+		B818CED921BAD66200332619 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B818CEDB21BAD67D00332619 /* CryptoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListViewController.swift; sourceTree = "<group>"; };
 		B818CEDD21BAD6D300332619 /* CryptoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListViewModel.swift; sourceTree = "<group>"; };
 		B818CEDF21BADA7600332619 /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
 		B818CEE221BADCFC00332619 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B899376121BE8504004AFA55 /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
+		B899376321BE8F1A004AFA55 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		B89CBF82219ECC0A00E9583C /* CryptoCompare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCompare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89CBF85219ECC0A00E9583C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B89CBF8A219ECC0A00E9583C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		B818CED721BAD63400332619 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B899376321BE8F1A004AFA55 /* BaseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -162,7 +165,7 @@
 		B818CED821BAD64800332619 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B818CED921BAD66200332619 /* GenericViewController.swift */,
+				B818CED921BAD66200332619 /* BaseViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -241,10 +244,10 @@
 		B89CBF84219ECC0A00E9583C /* CryptoCompare */ = {
 			isa = PBXGroup;
 			children = (
-				B821313421A308DD00F18CC1 /* Layouts */,
-				B821313621A3097F00F18CC1 /* Models */,
 				B821313521A3092500F18CC1 /* Network */,
+				B821313621A3097F00F18CC1 /* Models */,
 				B89CBFB3219F28D000E9583C /* Modules */,
+				B821313421A308DD00F18CC1 /* Layouts */,
 				B89CBF8C219ECC0B00E9583C /* Assets.xcassets */,
 				B89CBF8E219ECC0B00E9583C /* LaunchScreen.storyboard */,
 				B89CBF91219ECC0B00E9583C /* Info.plist */,
@@ -451,6 +454,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CryptoCompare-CryptoCompareTests/Pods-CryptoCompare-CryptoCompareTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -460,6 +464,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -479,6 +484,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CryptoCompare-CryptoCompareUITests/Pods-CryptoCompare-CryptoCompareUITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -488,6 +494,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -525,6 +532,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CryptoCompare/Pods-CryptoCompare-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -534,6 +542,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -588,7 +597,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B818CEDC21BAD67D00332619 /* CryptoListViewController.swift in Sources */,
-				B818CEDA21BAD66200332619 /* GenericViewController.swift in Sources */,
+				B899376421BE8F1A004AFA55 /* BaseViewModel.swift in Sources */,
+				B818CEDA21BAD66200332619 /* BaseViewController.swift in Sources */,
 				B818CECF21BAD31000332619 /* AppCoordinator.swift in Sources */,
 				B818CECD21BAD30600332619 /* CoordinatorProtocol.swift in Sources */,
 				B818CEE021BADA7600332619 /* CryptoCurrency.swift in Sources */,
@@ -776,10 +786,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J98FW8N44Z;
 				INFOPLIST_FILE = CryptoCompare/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.imark.CryptoCompare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -796,10 +803,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J98FW8N44Z;
 				INFOPLIST_FILE = CryptoCompare/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.imark.CryptoCompare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -816,11 +820,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J98FW8N44Z;
 				INFOPLIST_FILE = CryptoCompareTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.imark.CryptoCompareTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -838,11 +838,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J98FW8N44Z;
 				INFOPLIST_FILE = CryptoCompareTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.imark.CryptoCompareTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -859,11 +855,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J98FW8N44Z;
 				INFOPLIST_FILE = CryptoCompareUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.imark.CryptoCompareUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -880,11 +872,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J98FW8N44Z;
 				INFOPLIST_FILE = CryptoCompareUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.imark.CryptoCompareUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
