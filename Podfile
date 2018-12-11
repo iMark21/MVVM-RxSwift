@@ -13,11 +13,15 @@ target 'CryptoCompare' do
   target 'CryptoCompareTests' do
       pod 'RxSwift'
       pod 'RxCocoa'
+      pod 'RxTest'
+      pod 'RxBlocking'
   end
 
   target 'CryptoCompareUITests' do
       pod 'RxSwift'
       pod 'RxCocoa'
+      pod 'RxTest'
+      pod 'RxBlocking'
   end
 
 end
