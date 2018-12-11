@@ -30,7 +30,8 @@ class CryptoListCoordinator: CoordinatorProtocol {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CryptoListViewController") as? CryptoListViewController
         if let viewcontroller = vc {
-            let viewModel =  CryptoListViewModel()
+            let repository = CMCRepository()
+            let viewModel =  CryptoListViewModel(repository: repository)
             viewcontroller.viewModel = viewModel
             navigationController.pushViewController(viewcontroller, animated: true)
         }

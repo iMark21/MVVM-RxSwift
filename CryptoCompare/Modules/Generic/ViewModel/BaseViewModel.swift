@@ -12,7 +12,7 @@ class BaseViewModel{
     
     let disposeBag = DisposeBag()
     let isLoading = Variable<Bool>(true)
-    let error = Variable<Bool>(true)
+    let error = Variable<Bool>(false)
 
     
     init() {

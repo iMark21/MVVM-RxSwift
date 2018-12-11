@@ -26,6 +26,7 @@
 		B89CBF90219ECC0B00E9583C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89CBF8E219ECC0B00E9583C /* LaunchScreen.storyboard */; };
 		B89CBFA6219ECC0B00E9583C /* CryptoCompareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89CBFA5219ECC0B00E9583C /* CryptoCompareUITests.swift */; };
 		B8BB1C2221BFE04300A8828E /* CryptoListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BB1C2121BFE04300A8828E /* CryptoListViewModelTest.swift */; };
+		B8BB1C2A21C0097800A8828E /* CMCRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BB1C2921C0097800A8828E /* CMCRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		B89CBFA5219ECC0B00E9583C /* CryptoCompareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareUITests.swift; sourceTree = "<group>"; };
 		B89CBFA7219ECC0B00E9583C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8BB1C2121BFE04300A8828E /* CryptoListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListViewModelTest.swift; sourceTree = "<group>"; };
+		B8BB1C2921C0097800A8828E /* CMCRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 		B821313521A3092500F18CC1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B8BB1C2821C0095600A8828E /* CMCRepoistory */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -316,6 +319,14 @@
 			children = (
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B8BB1C2821C0095600A8828E /* CMCRepoistory */ = {
+			isa = PBXGroup;
+			children = (
+				B8BB1C2921C0097800A8828E /* CMCRepository.swift */,
+			);
+			path = CMCRepoistory;
 			sourceTree = "<group>";
 		};
 		E85B34BE9BE8B18FF51E9478 /* Frameworks */ = {
@@ -622,6 +633,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B818CEDC21BAD67D00332619 /* CryptoListViewController.swift in Sources */,
+				B8BB1C2A21C0097800A8828E /* CMCRepository.swift in Sources */,
 				B899376421BE8F1A004AFA55 /* BaseViewModel.swift in Sources */,
 				B818CEDA21BAD66200332619 /* BaseViewController.swift in Sources */,
 				B818CECF21BAD31000332619 /* AppCoordinator.swift in Sources */,

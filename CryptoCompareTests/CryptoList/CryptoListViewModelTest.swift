@@ -17,11 +17,11 @@ import ObjectMapper
 
 class CryptoListViewModelTest: XCTestCase {
     
-    private var viewModel = CryptoListViewModel()
+    private var viewModel : CryptoListViewModel?
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        viewModel = CryptoListViewModel()
+        viewModel = CryptoListViewModel(repository: CMCRepository())
     }
 
     override func tearDown() {

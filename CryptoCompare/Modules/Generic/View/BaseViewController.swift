@@ -24,7 +24,6 @@ struct SingleButtonAlert {
 
 class BaseViewController: UIViewController {
     
-    
     var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
