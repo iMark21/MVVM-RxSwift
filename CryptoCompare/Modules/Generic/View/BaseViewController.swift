@@ -36,8 +36,7 @@ class BaseViewController: UIViewController {
         visible ? PKHUD.sharedHUD.show(onView: view) : PKHUD.sharedHUD.hide()
     }
     
-    
-    func presentSingleButtonDialog(alert:SingleButtonAlert) {
+    func setShowError(alert:SingleButtonAlert) {
         let alertController = UIAlertController(title: alert.title,
                                                 message: alert.message,
                                                 preferredStyle: .alert)
@@ -48,7 +47,6 @@ class BaseViewController: UIViewController {
     }
     
     func setupViewModel() {
-        
         
     }
 

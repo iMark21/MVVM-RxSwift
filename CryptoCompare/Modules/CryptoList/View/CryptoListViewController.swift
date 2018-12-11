@@ -32,6 +32,14 @@ class CryptoListViewController: BaseViewController {
             self.setLoadingHud(visible: loading)
         }).disposed(by: disposeBag)
         
+        error.subscribe(onNext: { (error) in
+            let action = AlertAction(buttonTitle: "ok", handler: {
+                self.viewModel.requestData()
+            })
+            let alert = SingleButtonAlert(title: "", message: "", action: action)
+            self.setShowError(alert: alert)
+        }).disposed(by: disposeBag)
+        
         viewModel.data.asObservable()
             .bind(to: tableView.rx.items(cellIdentifier: "UITableViewCell", cellType: UITableViewCell.self)) {
                 (row, crypto, cell) in

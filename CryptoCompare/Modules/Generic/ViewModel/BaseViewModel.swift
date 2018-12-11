@@ -11,7 +11,7 @@ import RxSwift
 class BaseViewModel{
     
     let disposeBag = DisposeBag()
-    let isLoading = Variable<Bool>(false)
+    let isLoading = Variable<Bool>(true)
     let error = Variable<Bool>(true)
 
     

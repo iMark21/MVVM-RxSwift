@@ -20,6 +20,7 @@ class CryptoListViewModel: BaseViewModel{
         RxAlamofire.requestJSON(.get, Constants.API.baseUrl + Constants.API.Version.v1 + Constants.API.EndPoint.allTicker)
             .do(onSubscribe: { [weak self] in
                 self?.isLoading.value = true
+                self?.error.value = false
             })
             .subscribe(onNext: { (_, json) in
                 if let dict = json as? [[String: Any]] {
