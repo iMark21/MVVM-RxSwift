@@ -31,7 +31,6 @@ class CryptoListViewController: BaseViewController {
             
             isLoading.subscribe(onNext: { (loading) in
                 self.setLoadingHud(visible: loading)
-                print ("show mega loading")
             }).disposed(by: disposeBag)
             
             error.subscribe(onNext: { (error) in
