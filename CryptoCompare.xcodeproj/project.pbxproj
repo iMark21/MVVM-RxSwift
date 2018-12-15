@@ -193,6 +193,7 @@
 		B821313421A308DD00F18CC1 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				B89CBF8E219ECC0B00E9583C /* LaunchScreen.storyboard */,
 				B89CBF89219ECC0A00E9583C /* Main.storyboard */,
 			);
 			path = Layouts;
@@ -252,7 +253,6 @@
 				B89CBFB3219F28D000E9583C /* Modules */,
 				B821313421A308DD00F18CC1 /* Layouts */,
 				B89CBF8C219ECC0B00E9583C /* Assets.xcassets */,
-				B89CBF8E219ECC0B00E9583C /* LaunchScreen.storyboard */,
 				B89CBF91219ECC0B00E9583C /* Info.plist */,
 			);
 			path = CryptoCompare;

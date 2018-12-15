@@ -35,12 +35,14 @@ class CryptoListViewController: BaseViewController {
             }).disposed(by: disposeBag)
             
             error.subscribe(onNext: { (error) in
-                let action = AlertAction(buttonTitle: "ok", handler: {
-                    vm.requestData()
-                })
-                let alert = SingleButtonAlert(title: "", message: "", action: action)
-                //self.setShowError(alert: alert)
-                print ("show mega error")
+                if error{
+                    let action = AlertAction(buttonTitle: "ok", handler: {
+                        vm.requestData()
+                    })
+                    let alert = SingleButtonAlert(title: "", message: "", action: action)
+                    self.setShowError(alert: alert)
+                    print ("show mega error")
+                }
             }).disposed(by: disposeBag)
             
             vm.data.asObservable()
