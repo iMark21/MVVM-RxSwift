@@ -39,7 +39,7 @@ class CryptoListViewController: BaseViewController {
                     vm.requestData()
                 })
                 let alert = SingleButtonAlert(title: "", message: "", action: action)
-                self.setShowError(alert: alert)
+                //self.setShowError(alert: alert)
                 print ("show mega error")
             }).disposed(by: disposeBag)
             

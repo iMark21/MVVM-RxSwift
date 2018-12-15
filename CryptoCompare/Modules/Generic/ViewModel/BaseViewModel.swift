@@ -7,14 +7,14 @@
 //
 
 import RxSwift
+import RxCocoa
 
 class BaseViewModel{
     
     let disposeBag = DisposeBag()
-    let isLoading = Variable<Bool>(true)
-    let error = Variable<Bool>(false)
+    let isLoading = BehaviorRelay<Bool>(value:true)
+    let error = BehaviorRelay<Bool>(value:false)
 
-    
     init() {
         
     }
