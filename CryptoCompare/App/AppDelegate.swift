@@ -13,12 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let appCoordinator : AppCoordinator = AppCoordinator (window: window!)
-        appCoordinator.start()
-        window?.makeKeyAndVisible()
+        if let currentWindow = window{
+            let appCoordinator : AppCoordinator = AppCoordinator (window: currentWindow)
+            appCoordinator.start()
+            currentWindow.makeKeyAndVisible()
+        }
         
         return true
     }
