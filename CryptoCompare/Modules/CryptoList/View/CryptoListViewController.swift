@@ -22,7 +22,9 @@ class CryptoListViewController: BaseViewController {
         setupViewModel()
     }
     
-    func setupViewModel() {
+    override func setupViewModel() {
+        super.setupViewModel()
+        
         if let vm = viewModel{
             
             let state = vm.state.asObservable()

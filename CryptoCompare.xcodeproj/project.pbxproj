@@ -28,6 +28,8 @@
 		B8BB1C2221BFE04300A8828E /* CryptoListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BB1C2121BFE04300A8828E /* CryptoListViewModelTest.swift */; };
 		B8BB1C2A21C0097800A8828E /* CMCRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BB1C2921C0097800A8828E /* CMCRepository.swift */; };
 		D0B1209021C674880031E4A3 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1208F21C674880031E4A3 /* Layout.swift */; };
+		D0B1209321C677420031E4A3 /* BaseViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1209221C677420031E4A3 /* BaseViewModelProtocol.swift */; };
+		D0B1209521C677F20031E4A3 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1209421C677F20031E4A3 /* BaseViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		B8BB1C2121BFE04300A8828E /* CryptoListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListViewModelTest.swift; sourceTree = "<group>"; };
 		B8BB1C2921C0097800A8828E /* CMCRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCRepository.swift; sourceTree = "<group>"; };
 		D0B1208F21C674880031E4A3 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		D0B1209221C677420031E4A3 /* BaseViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelProtocol.swift; sourceTree = "<group>"; };
+		D0B1209421C677F20031E4A3 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +307,7 @@
 		B89CBFB5219F28EB00E9583C /* Generic */ = {
 			isa = PBXGroup;
 			children = (
+				D0B1209121C6772D0031E4A3 /* Protocols */,
 				B818CED721BAD63400332619 /* ViewModel */,
 				B818CED821BAD64800332619 /* View */,
 			);
@@ -346,6 +351,15 @@
 				B89CBF8E219ECC0B00E9583C /* LaunchScreen.storyboard */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		D0B1209121C6772D0031E4A3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D0B1209221C677420031E4A3 /* BaseViewModelProtocol.swift */,
+				D0B1209421C677F20031E4A3 /* BaseViewProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		E85B34BE9BE8B18FF51E9478 /* Frameworks */ = {
@@ -655,9 +669,11 @@
 				B8BB1C2A21C0097800A8828E /* CMCRepository.swift in Sources */,
 				B899376421BE8F1A004AFA55 /* BaseViewModel.swift in Sources */,
 				B818CEDA21BAD66200332619 /* BaseViewController.swift in Sources */,
+				D0B1209321C677420031E4A3 /* BaseViewModelProtocol.swift in Sources */,
 				B818CECF21BAD31000332619 /* AppCoordinator.swift in Sources */,
 				D0B1209021C674880031E4A3 /* Layout.swift in Sources */,
 				B818CECD21BAD30600332619 /* CoordinatorProtocol.swift in Sources */,
+				D0B1209521C677F20031E4A3 /* BaseViewProtocol.swift in Sources */,
 				B818CEE021BADA7600332619 /* CryptoCurrency.swift in Sources */,
 				B818CEE321BADCFC00332619 /* Constants.swift in Sources */,
 				B89CBF86219ECC0A00E9583C /* AppDelegate.swift in Sources */,

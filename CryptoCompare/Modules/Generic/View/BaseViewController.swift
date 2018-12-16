@@ -23,7 +23,7 @@ struct SingleButtonAlert {
     let action: AlertAction
 }
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, BaseViewProtocol {
     
     var disposeBag = DisposeBag()
     
@@ -32,6 +32,11 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewModel()
+    }
+    
+    func setupViewModel() {
+        
     }
     
     func setLoadingHud(visible:Bool){
