@@ -9,11 +9,16 @@
 import RxSwift
 import RxCocoa
 
+enum State {
+    case loading
+    case error
+    case completed
+}
+
 class BaseViewModel{
     
     let disposeBag = DisposeBag()
-    let isLoading = BehaviorRelay<Bool>(value:true)
-    let error = BehaviorRelay<Bool>(value:false)
+    var state = BehaviorRelay<State>(value: .completed)
 
     init() {
         

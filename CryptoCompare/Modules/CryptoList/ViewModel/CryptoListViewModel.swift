@@ -25,6 +25,7 @@ class CryptoListViewModel: BaseViewModel {
     }
 
     func requestData(){
+        state.accept(.loading)
         repository.getCryptoCurrencies().asObservable()
         .subscribe(onNext: { (_, json) in
             if let dict = json as? [[String: Any]] {
@@ -32,11 +33,9 @@ class CryptoListViewModel: BaseViewModel {
                 self.data.accept(data)
             }
         }, onError: { (error) in
-            self.isLoading.accept(false)
-            self.error.accept(true)
+            self.state.accept(.error)
         }, onCompleted: {
-            self.isLoading.accept(false)
-            self.error.accept(false)
+            self.state.accept(.completed)
         }).disposed(by: disposeBag)
     }
 }

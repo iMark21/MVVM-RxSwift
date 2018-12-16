@@ -9,6 +9,7 @@
 import UIKit
 import PKHUD
 import RxSwift
+import RxCocoa
 
 
 struct AlertAction {
@@ -25,6 +26,9 @@ struct SingleButtonAlert {
 class BaseViewController: UIViewController {
     
     var disposeBag = DisposeBag()
+    
+    //Input
+    var reloadDataAction = BehaviorRelay<Bool>(value: false)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +49,26 @@ class BaseViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    func setupViewModel() {
-        
+    func setStateView(state: Observable<State>){
+        state.subscribe(onNext: { (result) in
+            switch result {
+            case .loading:
+                self.setLoadingHud(visible: true)
+                break
+            case .error:
+                self.setLoadingHud(visible: false)
+                let action = AlertAction(buttonTitle: "ok", handler: {
+                    self.reloadDataAction.accept(true)
+                })
+                let alert = SingleButtonAlert(title: "Oops!", message: "Problems", action: action)
+                print ("show mega error")
+                self.setShowError(alert: alert)
+                break
+            case .completed:
+                self.setLoadingHud(visible: false)
+                break
+            }
+        }).disposed(by: disposeBag)
     }
-
+    
 }

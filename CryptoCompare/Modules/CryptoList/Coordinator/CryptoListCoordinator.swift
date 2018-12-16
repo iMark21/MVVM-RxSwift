@@ -17,7 +17,6 @@ class CryptoListCoordinator: CoordinatorProtocol {
     let navigationController: UINavigationController
     weak var delegate: CryptoListCoordinatorDelegate?
 
-    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
@@ -27,7 +26,7 @@ class CryptoListCoordinator: CoordinatorProtocol {
     }
     
     func showCryptoList() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: LayoutIdentifiers.Main, bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CryptoListViewController") as? CryptoListViewController
         if let viewcontroller = vc {
             let repository = CMCRepository()

@@ -22,26 +22,16 @@ class CryptoListViewController: BaseViewController {
         setupViewModel()
     }
     
-    override func setupViewModel() {
-        super.setupViewModel()
-        
+    func setupViewModel() {
         if let vm = viewModel{
-            let isLoading = vm.isLoading.asObservable()
-            let error = vm.error.asObservable()
             
-            isLoading.subscribe(onNext: { (loading) in
-                self.setLoadingHud(visible: loading)
-            }).disposed(by: disposeBag)
+            let state = vm.state.asObservable()
+            self.setStateView(state: state)
             
-            error.subscribe(onNext: { (error) in
-                if error{
-                    let action = AlertAction(buttonTitle: "ok", handler: {
-                        vm.requestData()
-                    })
-                    let alert = SingleButtonAlert(title: "", message: "", action: action)
-                    self.setShowError(alert: alert)
-                    print ("show mega error")
-                }
+            reloadDataAction.asObservable().subscribe(onNext: { (request) in
+                vm.requestData()
+            }, onCompleted: {
+                self.reloadDataAction.accept(false)
             }).disposed(by: disposeBag)
             
             vm.data.asObservable()
@@ -63,5 +53,4 @@ class CryptoListViewController: BaseViewController {
 
         }
     }
-    
 }
