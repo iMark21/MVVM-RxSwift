@@ -9,5 +9,5 @@
 import Foundation
 
 protocol BaseViewProtocol : class {
-    func setupViewModel()
+
 }

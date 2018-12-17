@@ -37,5 +37,12 @@ class CryptoListViewModel: BaseViewModel {
         }, onCompleted: {
             self.state.accept(.completed)
         }).disposed(by: disposeBag)
+        
+        
+        /*
+         .flatMap({ (_, json) -> Observable<[CryptoCurrency]> in
+         //
+         //        })
+ */
     }
 }

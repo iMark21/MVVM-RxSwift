@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import PKHUD
 
-class CryptoListViewController: BaseViewController {
+class CryptoListViewController: UIViewController {
     
     @IBOutlet weak var tableView:UITableView!
     
@@ -22,37 +22,41 @@ class CryptoListViewController: BaseViewController {
         setupViewModel()
     }
     
-    override func setupViewModel() {
-        super.setupViewModel()
+    func setupViewModel() {
+
+        guard let vm = viewModel else {
+            return
+        }
         
-        if let vm = viewModel{
-            
-            let state = vm.state.asObservable()
-            self.setStateView(state: state)
-            
-            reloadDataAction.asObservable().subscribe(onNext: { (request) in
+        let state = vm.state.asObservable()
+        
+        let baseViewController = BaseViewController.init(state: state)
+        add(child: baseViewController)
+        
+        baseViewController.reloadDataAction.asObservable()
+            .subscribe(onNext: { (request) in
                 vm.requestData()
             }, onCompleted: {
-                self.reloadDataAction.accept(false)
-            }).disposed(by: disposeBag)
-            
-            vm.data.asObservable()
-                .bind(to: tableView.rx.items(cellIdentifier: "UITableViewCell", cellType: UITableViewCell.self)) {
-                    (row, crypto, cell) in
-                    print ("show \(String(describing: crypto.name))")
-                    cell.backgroundColor = UIColor.yellow
-                    cell.textLabel?.text = crypto.name
-                    cell.detailTextLabel?.text = crypto.priceUsd
-                }.disposed(by: disposeBag)
-            
-            vm.requestData()
-            
-            tableView.rx
-                .modelSelected(CryptoCurrency.self)
-                .subscribe(onNext: { (value) in
-                    print ("show next \(String(describing: value.name))")
-                }).disposed(by: disposeBag)
-
-        }
+                baseViewController.reloadDataAction.accept(false)
+            }).disposed(by: baseViewController.disposeBag)
+        
+        
+        vm.data.asObservable()
+            .bind(to: tableView.rx.items(cellIdentifier: "UITableViewCell", cellType: UITableViewCell.self)) {
+                (row, crypto, cell) in
+                print ("show \(String(describing: crypto.name))")
+                cell.backgroundColor = UIColor.yellow
+                cell.textLabel?.text = crypto.name
+                cell.detailTextLabel?.text = crypto.priceUsd
+            }.disposed(by: baseViewController.disposeBag)
+        
+        vm.requestData()
+        
+        tableView.rx
+            .modelSelected(CryptoCurrency.self)
+            .subscribe(onNext: { (value) in
+                print ("show next \(String(describing: value.name))")
+            }).disposed(by: baseViewController.disposeBag)
+        
     }
 }
