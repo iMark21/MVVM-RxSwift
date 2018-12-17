@@ -19,7 +19,6 @@
 		B818CEE021BADA7600332619 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818CEDF21BADA7600332619 /* CryptoCurrency.swift */; };
 		B818CEE321BADCFC00332619 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818CEE221BADCFC00332619 /* Constants.swift */; };
 		B899376221BE8504004AFA55 /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B899376121BE8504004AFA55 /* CryptoTableViewCell.swift */; };
-		B899376421BE8F1A004AFA55 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B899376321BE8F1A004AFA55 /* BaseViewModel.swift */; };
 		B89CBF86219ECC0A00E9583C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89CBF85219ECC0A00E9583C /* AppDelegate.swift */; };
 		B89CBF8B219ECC0A00E9583C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89CBF89219ECC0A00E9583C /* Main.storyboard */; };
 		B89CBF8D219ECC0B00E9583C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89CBF8C219ECC0B00E9583C /* Assets.xcassets */; };
@@ -69,7 +68,6 @@
 		B818CEDF21BADA7600332619 /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
 		B818CEE221BADCFC00332619 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B899376121BE8504004AFA55 /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
-		B899376321BE8F1A004AFA55 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		B89CBF82219ECC0A00E9583C /* CryptoCompare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCompare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89CBF85219ECC0A00E9583C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B89CBF8A219ECC0A00E9583C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 		B818CED721BAD63400332619 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B899376321BE8F1A004AFA55 /* BaseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -678,7 +675,6 @@
 			files = (
 				B818CEDC21BAD67D00332619 /* CryptoListViewController.swift in Sources */,
 				B8BB1C2A21C0097800A8828E /* CMCRepository.swift in Sources */,
-				B899376421BE8F1A004AFA55 /* BaseViewModel.swift in Sources */,
 				B818CEDA21BAD66200332619 /* BaseViewController.swift in Sources */,
 				D0B1209321C677420031E4A3 /* BaseViewModelProtocol.swift in Sources */,
 				B818CECF21BAD31000332619 /* AppCoordinator.swift in Sources */,

@@ -24,32 +24,22 @@ struct SingleButtonAlert {
 
 class BaseViewController: UIViewController, BaseViewProtocol {
     
-    private var state : Observable<State>
+    private var state = PublishSubject<State>()
     var disposeBag = DisposeBag()
     
     //Input
     var reloadDataAction = BehaviorRelay<Bool>(value: false)
     
-    init(state: Observable<State>) {
-        self.state = state
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        showStateView()
     }
     
-    private func setLoadingHud(visible:Bool){
+    func setLoadingHud(visible:Bool){
         PKHUD.sharedHUD.contentView = PKHUDSystemActivityIndicatorView()
         visible ? PKHUD.sharedHUD.show(onView: view) : PKHUD.sharedHUD.hide()
     }
     
-    private func setShowError(alert:SingleButtonAlert) {
+    func setShowError(alert:SingleButtonAlert) {
         let alertController = UIAlertController(title: alert.title,
                                                 message: alert.message,
                                                 preferredStyle: .alert)
@@ -59,7 +49,7 @@ class BaseViewController: UIViewController, BaseViewProtocol {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    private func showStateView(){
+    func showStateView(state: Observable<State>){
         state.subscribe(onNext: { (result) in
             switch result {
             case .loading:
@@ -74,7 +64,7 @@ class BaseViewController: UIViewController, BaseViewProtocol {
                 print ("show mega error")
                 self.setShowError(alert: alert)
                 break
-            case .completed:
+            case .loaded(_):
                 self.setLoadingHud(visible: false)
                 break
             }

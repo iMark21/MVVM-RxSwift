@@ -30,33 +30,48 @@ class CryptoListViewController: UIViewController {
         
         let state = vm.state.asObservable()
         
-        let baseViewController = BaseViewController.init(state: state)
+        let baseViewController = BaseViewController()
         add(child: baseViewController)
+        
+        baseViewController.showStateView(state: state)
+
+        vm.requestData()
+        
+
+        state.subscribe(onNext: { (state) in
+            switch state{
+            case .loaded(let data):
+                
+                data.asObservable()
+                    .bind(to: self.tableView.rx.items(cellIdentifier: "UITableViewCell", cellType: UITableViewCell.self)) {
+                        (row, crypto, cell) in
+                        print ("show \(String(describing: crypto.name))")
+                        cell.backgroundColor = UIColor.yellow
+                        cell.textLabel?.text = crypto.name
+                        cell.detailTextLabel?.text = crypto.priceUsd
+                    }.disposed(by: baseViewController.disposeBag)
+                
+                self.tableView.rx
+                    .modelSelected(CryptoCurrency.self)
+                    .subscribe(onNext: { (value) in
+                        print ("show next \(String(describing: value.name))")
+                    }).disposed(by: baseViewController.disposeBag)
+                
+                break
+            default:
+                break
+            }
+        }).disposed(by: baseViewController.disposeBag)
         
         baseViewController.reloadDataAction.asObservable()
             .subscribe(onNext: { (request) in
-                vm.requestData()
+                if request {
+                    vm.requestData()
+                }
             }, onCompleted: {
                 baseViewController.reloadDataAction.accept(false)
             }).disposed(by: baseViewController.disposeBag)
         
-        
-        vm.data.asObservable()
-            .bind(to: tableView.rx.items(cellIdentifier: "UITableViewCell", cellType: UITableViewCell.self)) {
-                (row, crypto, cell) in
-                print ("show \(String(describing: crypto.name))")
-                cell.backgroundColor = UIColor.yellow
-                cell.textLabel?.text = crypto.name
-                cell.detailTextLabel?.text = crypto.priceUsd
-            }.disposed(by: baseViewController.disposeBag)
-        
-        vm.requestData()
-        
-        tableView.rx
-            .modelSelected(CryptoCurrency.self)
-            .subscribe(onNext: { (value) in
-                print ("show next \(String(describing: value.name))")
-            }).disposed(by: baseViewController.disposeBag)
-        
+
     }
 }

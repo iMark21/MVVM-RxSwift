@@ -12,37 +12,44 @@ import RxCocoa
 import ObjectMapper
 
 
-class CryptoListViewModel: BaseViewModel {
+
+enum State {
+    case loading
+    case error
+    case loaded (BehaviorRelay<[CryptoCurrency]>)
+}
+
+
+class CryptoListViewModel {
     
+    private let disposeBag = DisposeBag()
+    private var data = BehaviorRelay<[CryptoCurrency]>(value: [])
+
     //input
-    var repository : CMCRepository
+    private var repository : CMCRepository
     
     //output
-    var data = BehaviorRelay<[CryptoCurrency]>(value: [])
+    var state  = PublishSubject<State>()
 
     init(repository : CMCRepository) {
         self.repository = repository
     }
 
     func requestData(){
-        state.accept(.loading)
+
+        state.onNext(.loading)
+        
         repository.getCryptoCurrencies().asObservable()
-        .subscribe(onNext: { (_, json) in
-            if let dict = json as? [[String: Any]] {
-                let data = Mapper<CryptoCurrency>().mapArray(JSONArray: dict)
-                self.data.accept(data)
-            }
-        }, onError: { (error) in
-            self.state.accept(.error)
-        }, onCompleted: {
-            self.state.accept(.completed)
-        }).disposed(by: disposeBag)
+            .subscribe(onNext: { (_,json) in
+                if let dict = json as? [[String: Any]] {
+                    let data = Mapper<CryptoCurrency>().mapArray(JSONArray: dict)
+                    self.data.accept(data)
+                }
+            }, onError: { (error) in
+                self.state.onNext(.error)
+            }, onCompleted: {
+                self.state.onNext(.loaded(self.data))
+            }).disposed(by: disposeBag)
         
-        
-        /*
-         .flatMap({ (_, json) -> Observable<[CryptoCurrency]> in
-         //
-         //        })
- */
     }
 }
