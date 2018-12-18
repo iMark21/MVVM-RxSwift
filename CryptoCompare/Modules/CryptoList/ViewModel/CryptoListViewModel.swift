@@ -36,7 +36,9 @@ class CryptoListViewModel {
     }
 
     func requestData(){
+        
         state.onNext(.loading)
+        
         repository.getCryptoCurrencies().asObservable()
             .flatMap({ (_, json) -> BehaviorRelay<[CryptoCurrency]> in
                 if let dict = json as? [[String: Any]] {
@@ -44,12 +46,11 @@ class CryptoListViewModel {
                     self.data.accept(data)
                 }
                 return self.data
-            }).subscribe(onNext: { (list) in
+            })
+            .subscribe(onNext: { (list) in
                 self.state.onNext(.loaded(BehaviorRelay.init(value: list)))
             }, onError: { (error) in
                 self.state.onNext(.error)
-            }, onCompleted: {
-                self.state.onNext(.loaded(self.data))
             }).disposed(by: disposeBag)
     }
 

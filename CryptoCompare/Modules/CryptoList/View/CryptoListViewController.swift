@@ -29,14 +29,10 @@ class CryptoListViewController: UIViewController {
         }
         
         let state = vm.state.asObservable()
-        
-        let baseViewController = BaseViewController()
-        add(child: baseViewController)
-        
-        baseViewController.showStateView(state: state)
+        let disposeBag = DisposeBag()
+        let loadingViewController = LoadingViewController()
+        let errorViewController = ErrorViewController()
 
-        vm.requestData()
-        
         state.subscribe(onNext: { (state) in
             switch state{
             case .loaded(let data):
@@ -47,29 +43,37 @@ class CryptoListViewController: UIViewController {
                         cell.backgroundColor = UIColor.yellow
                         cell.textLabel?.text = crypto.name
                         cell.detailTextLabel?.text = crypto.priceUsd
-                    }.disposed(by: baseViewController.disposeBag)
+                    }.disposed(by: disposeBag)
                 
                 self.tableView.rx
                     .modelSelected(CryptoCurrency.self)
                     .subscribe(onNext: { (value) in
                         print ("show next \(String(describing: value.name))")
-                    }).disposed(by: baseViewController.disposeBag)
+                    }).disposed(by: disposeBag)
                 
+                errorViewController.remove()
+                loadingViewController.remove()
                 break
-            default:
+            case .loading:
+                errorViewController.remove()
+                self.add(child: loadingViewController)
+                break
+            case .error:
+                loadingViewController.remove()
+                self.add(child: errorViewController)
                 break
             }
-        }).disposed(by: baseViewController.disposeBag)
+        }).disposed(by: disposeBag)
         
-        baseViewController.reloadDataAction.asObservable()
+        vm.requestData()
+        
+        errorViewController.reloadDataAction.asObservable()
             .subscribe(onNext: { (request) in
                 if request {
                     vm.requestData()
                 }
             }, onCompleted: {
-                baseViewController.reloadDataAction.accept(false)
-            }).disposed(by: baseViewController.disposeBag)
-        
-
+                errorViewController.reloadDataAction.accept(false)
+            }).disposed(by: disposeBag)
     }
 }
