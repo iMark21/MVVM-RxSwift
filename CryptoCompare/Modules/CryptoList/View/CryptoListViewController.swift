@@ -37,11 +37,9 @@ class CryptoListViewController: UIViewController {
 
         vm.requestData()
         
-
         state.subscribe(onNext: { (state) in
             switch state{
             case .loaded(let data):
-                
                 data.asObservable()
                     .bind(to: self.tableView.rx.items(cellIdentifier: "UITableViewCell", cellType: UITableViewCell.self)) {
                         (row, crypto, cell) in
