@@ -12,3 +12,6 @@ Diagram:
 - Using [Composition](https://medium.com/commencis/reusability-and-composition-in-swift-6630fc199e16) to avoid making use of baseviewcontroller
 - Using [RxAlamofire](https://github.com/RxSwiftCommunity/RxAlamofire) to interact with server
 - Using [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper) to mapping data response
+
+## Author
+iMark21, marques.jm@icloud.com
