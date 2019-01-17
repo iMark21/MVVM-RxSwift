@@ -8,7 +8,6 @@ target 'CryptoCompare' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxAlamofire'
-  pod 'PKHUD', '~> 5.0'
 
   target 'CryptoCompareTests' do
       pod 'RxSwift'
