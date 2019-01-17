@@ -20,12 +20,14 @@
 		B82109B121EF454800DD3959 /* CryptoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82109AF21EF454800DD3959 /* CryptoListTableViewCell.swift */; };
 		B82109B221EF454800DD3959 /* CryptoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82109B021EF454800DD3959 /* CryptoListTableViewCell.xib */; };
 		B82109B521EF458500DD3959 /* CryptoListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82109B421EF458500DD3959 /* CryptoListCellViewModel.swift */; };
+		B82109B721F0D20800DD3959 /* String+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82109B621F0D20800DD3959 /* String+extensions.swift */; };
+		B82109B921F0D21F00DD3959 /* UIColor+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82109B821F0D21F00DD3959 /* UIColor+extensions.swift */; };
+		B82109BB21F0D22C00DD3959 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82109BA21F0D22C00DD3959 /* UIViewController+extensions.swift */; };
 		B89CBF86219ECC0A00E9583C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89CBF85219ECC0A00E9583C /* AppDelegate.swift */; };
 		B89CBF8B219ECC0A00E9583C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89CBF89219ECC0A00E9583C /* Main.storyboard */; };
 		B89CBF8D219ECC0B00E9583C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89CBF8C219ECC0B00E9583C /* Assets.xcassets */; };
 		B89CBF90219ECC0B00E9583C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89CBF8E219ECC0B00E9583C /* LaunchScreen.storyboard */; };
 		B89CBFA6219ECC0B00E9583C /* CryptoCompareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89CBFA5219ECC0B00E9583C /* CryptoCompareUITests.swift */; };
-		B8B3F70A21C7FBED0002D97D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B3F70921C7FBED0002D97D /* Utils.swift */; };
 		B8BB1C2221BFE04300A8828E /* CryptoListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BB1C2121BFE04300A8828E /* CryptoListViewModelTest.swift */; };
 		B8BB1C2A21C0097800A8828E /* CMCRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BB1C2921C0097800A8828E /* CMCRepository.swift */; };
 		B8C4C41121C94E4200864CEF /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C4C41021C94E4200864CEF /* LoadingViewController.swift */; };
@@ -70,6 +72,9 @@
 		B82109AF21EF454800DD3959 /* CryptoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListTableViewCell.swift; sourceTree = "<group>"; };
 		B82109B021EF454800DD3959 /* CryptoListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CryptoListTableViewCell.xib; sourceTree = "<group>"; };
 		B82109B421EF458500DD3959 /* CryptoListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListCellViewModel.swift; sourceTree = "<group>"; };
+		B82109B621F0D20800DD3959 /* String+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extensions.swift"; sourceTree = "<group>"; };
+		B82109B821F0D21F00DD3959 /* UIColor+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extensions.swift"; sourceTree = "<group>"; };
+		B82109BA21F0D22C00DD3959 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
 		B89CBF82219ECC0A00E9583C /* CryptoCompare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCompare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89CBF85219ECC0A00E9583C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B89CBF8A219ECC0A00E9583C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,7 +86,6 @@
 		B89CBFA1219ECC0B00E9583C /* CryptoCompareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoCompareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89CBFA5219ECC0B00E9583C /* CryptoCompareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareUITests.swift; sourceTree = "<group>"; };
 		B89CBFA7219ECC0B00E9583C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8B3F70921C7FBED0002D97D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B8BB1C2121BFE04300A8828E /* CryptoListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListViewModelTest.swift; sourceTree = "<group>"; };
 		B8BB1C2921C0097800A8828E /* CMCRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCRepository.swift; sourceTree = "<group>"; };
 		B8C4C41021C94E4200864CEF /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
@@ -282,7 +286,6 @@
 		B89CBF99219ECC0B00E9583C /* CryptoCompareTests */ = {
 			isa = PBXGroup;
 			children = (
-				B8BB1C2721BFE72300A8828E /* Mocks */,
 				B8BB1C1E21BFD60D00A8828E /* CryptoList */,
 				B89CBF9C219ECC0B00E9583C /* Info.plist */,
 			);
@@ -320,7 +323,9 @@
 		B8B3F70621C7FA320002D97D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B8B3F70921C7FBED0002D97D /* Utils.swift */,
+				B82109B621F0D20800DD3959 /* String+extensions.swift */,
+				B82109B821F0D21F00DD3959 /* UIColor+extensions.swift */,
+				B82109BA21F0D22C00DD3959 /* UIViewController+extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -331,13 +336,6 @@
 				B8BB1C2121BFE04300A8828E /* CryptoListViewModelTest.swift */,
 			);
 			path = CryptoList;
-			sourceTree = "<group>";
-		};
-		B8BB1C2721BFE72300A8828E /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Mocks;
 			sourceTree = "<group>";
 		};
 		B8BB1C2821C0095600A8828E /* CMCRepoistory */ = {
@@ -691,8 +689,9 @@
 				B82109B521EF458500DD3959 /* CryptoListCellViewModel.swift in Sources */,
 				B8BB1C2A21C0097800A8828E /* CMCRepository.swift in Sources */,
 				B818CECF21BAD31000332619 /* AppCoordinator.swift in Sources */,
+				B82109B721F0D20800DD3959 /* String+extensions.swift in Sources */,
 				D0B1209021C674880031E4A3 /* Layout.swift in Sources */,
-				B8B3F70A21C7FBED0002D97D /* Utils.swift in Sources */,
+				B82109B921F0D21F00DD3959 /* UIColor+extensions.swift in Sources */,
 				B818CECD21BAD30600332619 /* CoordinatorProtocol.swift in Sources */,
 				B818CEE021BADA7600332619 /* CryptoCurrency.swift in Sources */,
 				B8C4C41321C9525400864CEF /* ErrorViewController.swift in Sources */,
@@ -701,6 +700,7 @@
 				B89CBF86219ECC0A00E9583C /* AppDelegate.swift in Sources */,
 				B818CEDE21BAD6D300332619 /* CryptoListViewModel.swift in Sources */,
 				B8C4C41121C94E4200864CEF /* LoadingViewController.swift in Sources */,
+				B82109BB21F0D22C00DD3959 /* UIViewController+extensions.swift in Sources */,
 				B818CED421BAD49200332619 /* CryptoListCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

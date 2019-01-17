@@ -12,6 +12,7 @@ import ObjectMapper
 class CryptoCurrency: Mappable {
     
     var id:String!
+    var rank:String!
     var name:String!
     var symbol:String!
     var priceUsd:String!
@@ -28,10 +29,11 @@ class CryptoCurrency: Mappable {
     
     func mapping(map: Map) {
         id                  <- map["id"]
+        rank                <- map["rank"]
         name                <- map["name"]
         symbol              <- map["symbol"]
         priceUsd            <- map["price_usd"]
-        percentChange1h     <- map["percent_change_1h"]
+        percentChange1h     <- map["percent_change_24h"]
         lastUpdated         <- (map["last_updated"], DateTransform())
     }
 

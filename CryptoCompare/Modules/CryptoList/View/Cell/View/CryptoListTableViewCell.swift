@@ -10,11 +10,11 @@ import UIKit
 
 class CryptoListTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var imageTicker: UIImageView!
-    @IBOutlet weak var nameTicker: UILabel!
-    @IBOutlet weak var valueTicker: UILabel!
-    @IBOutlet weak var valueBtcTicker: UILabel!
-    @IBOutlet weak var percentageLastDayTicker: UILabel!
+    @IBOutlet var rankLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var symbolLabel: UILabel!
+    @IBOutlet weak var percentageLabel: UILabel!
     @IBOutlet weak var borderView: UIView!
     @IBOutlet weak var viewPercentage: UIView!
 
@@ -23,9 +23,11 @@ class CryptoListTableViewCell: UITableViewCell {
     }
     
     public func setup (viewModel: CryptoListCellViewModel?){
-        nameTicker?.text = viewModel?.title
-        valueTicker?.text = viewModel?.price
-        valueBtcTicker?.text = viewModel?.price
-        percentageLastDayTicker?.text = viewModel?.percentChange1
+        rankLabel?.text = viewModel?.rank
+        nameLabel?.text = viewModel?.title
+        valueLabel?.text = viewModel?.price
+        symbolLabel?.text = viewModel?.symbol
+        percentageLabel?.text = viewModel?.percentChange1
+        viewPercentage?.backgroundColor = viewModel?.colorPercent
     }
 }
