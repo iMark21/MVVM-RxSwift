@@ -9,71 +9,80 @@
 import Foundation
 import RxSwift
 import RxCocoa
-import PKHUD
 
 class CryptoListViewController: UIViewController {
     
     @IBOutlet weak var tableView:UITableView!
     
     var viewModel : CryptoListViewModel?
+    var cellViewModels : [CryptoListCellViewModel] = []
+    let loadingViewController = LoadingViewController()
+    let errorViewController = ErrorViewController()
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTableView()
         setupViewModel()
+    }
+    
+    func configureTableView(){
+        tableView.register(UINib(nibName: "CryptoListTableViewCell", bundle: nil), forCellReuseIdentifier: "CryptoListTableViewCell")
     }
     
     func setupViewModel() {
 
-        guard let vm = viewModel else {
-            return
-        }
-        
+        guard let vm = viewModel else {return}
         let state = vm.state.asObservable()
-        let disposeBag = DisposeBag()
-        let loadingViewController = LoadingViewController()
-        let errorViewController = ErrorViewController()
-
+        
         state.subscribe(onNext: { (state) in
             switch state{
-            case .loaded(let data):
-                data.asObservable()
-                    .bind(to: self.tableView.rx.items(cellIdentifier: "UITableViewCell", cellType: UITableViewCell.self)) {
-                        (row, crypto, cell) in
-                        print ("show \(String(describing: crypto.name))")
-                        cell.backgroundColor = UIColor.yellow
-                        cell.textLabel?.text = crypto.name
-                        cell.detailTextLabel?.text = crypto.priceUsd
-                    }.disposed(by: disposeBag)
-                
-                self.tableView.rx
-                    .modelSelected(CryptoCurrency.self)
-                    .subscribe(onNext: { (value) in
-                        print ("show next \(String(describing: value.name))")
-                    }).disposed(by: disposeBag)
-                
-                errorViewController.remove()
-                loadingViewController.remove()
+            case .loaded(let cellViewModels):
+                self.cellViewModels = cellViewModels
+                self.tableView.reloadData()
+                self.errorViewController.remove()
+                self.loadingViewController.remove()
                 break
             case .loading:
-                errorViewController.remove()
-                self.add(child: loadingViewController)
+                self.errorViewController.remove()
+                self.add(child: self.loadingViewController)
                 break
             case .error:
-                loadingViewController.remove()
-                self.add(child: errorViewController)
+                self.loadingViewController.remove()
+                self.add(child: self.errorViewController)
                 break
             }
         }).disposed(by: disposeBag)
         
+        //Request data
         vm.requestData()
         
+        //Manage error view
         errorViewController.reloadDataAction.asObservable()
             .subscribe(onNext: { (request) in
                 if request {
                     vm.requestData()
                 }
             }, onCompleted: {
-                errorViewController.reloadDataAction.accept(false)
+                self.errorViewController.reloadDataAction.accept(false)
             }).disposed(by: disposeBag)
     }
+    
+}
+
+extension CryptoListViewController : UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cellViewModels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CryptoListTableViewCell", for: indexPath)
+        if let cell = cell as? CryptoListTableViewCell{
+            let rowViewModel = cellViewModels[indexPath.row]
+            cell.setup(viewModel: rowViewModel)
+        }
+        return cell
+    }
+    
 }

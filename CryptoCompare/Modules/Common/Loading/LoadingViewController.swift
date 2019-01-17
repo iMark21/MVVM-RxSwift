@@ -21,13 +21,11 @@ class LoadingViewController: UIViewController {
             activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
             ])
-        
-        self.view.backgroundColor = UIColor.yellow
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.view.backgroundColor = UIColor.black
+        self.view.backgroundColor = UIColor.darkGray
         self.activityIndicator.startAnimating()
     }
 }

@@ -16,7 +16,7 @@ import ObjectMapper
 enum State {
     case loading
     case error
-    case loaded (BehaviorRelay<[CryptoCurrency]>)
+    case loaded ([CryptoListCellViewModel])
 }
 
 
@@ -36,9 +36,7 @@ class CryptoListViewModel {
     }
 
     func requestData(){
-        
         state.onNext(.loading)
-        
         repository.getCryptoCurrencies().asObservable()
             .flatMap({ (_, json) -> BehaviorRelay<[CryptoCurrency]> in
                 if let dict = json as? [[String: Any]] {
@@ -48,10 +46,18 @@ class CryptoListViewModel {
                 return self.data
             })
             .subscribe(onNext: { (list) in
-                self.state.onNext(.loaded(BehaviorRelay.init(value: list)))
+                self.state.onNext(.loaded(self.buildCellViewModels(data: list)))
             }, onError: { (error) in
                 self.state.onNext(.error)
             }).disposed(by: disposeBag)
+    }
+    
+    func buildCellViewModels(data: [CryptoCurrency]) -> [CryptoListCellViewModel] {
+        var viewModels = [CryptoListCellViewModel]()
+        for item in data {
+            viewModels.append(CryptoListCellViewModel.init(item: item))
+        }
+        return viewModels
     }
 
 }
