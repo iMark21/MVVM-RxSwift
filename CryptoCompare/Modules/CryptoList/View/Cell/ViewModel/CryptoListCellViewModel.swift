@@ -21,9 +21,9 @@ class CryptoListCellViewModel {
     init(item: CryptoCurrency) {
         rank = item.rank
         title = item.name
-        price = item.priceUsd.normalizeQuantityWithTwoDecimals()
+        price = item.priceUsd.normalizePrice()
         symbol = item.symbol
-        percentChange1 = item.percentChange1h.getNormalizedPercentage()
+        percentChange1 = item.percentChange1h.normalizedPercentage()
         colorPercent = UIColor.getColor(percengateNumber: item.percentChange1h)
     }
 }
