@@ -13,5 +13,8 @@ Diagram:
 - Using [RxAlamofire](https://github.com/RxSwiftCommunity/RxAlamofire) to interact with server
 - Using [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper) to mapping data response
 
+## Screenshot
+![alt text](https://i.imgur.com/auwOlOA.png)
+
 ## Author
 iMark21, marques.jm@icloud.com
