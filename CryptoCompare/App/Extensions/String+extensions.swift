@@ -9,11 +9,11 @@
 import Foundation
 
 extension String {
-    func normalizeQuantityWithTwoDecimals() -> String{
-        return String(format: "%.2f", Double((self)) ?? "0.00")
+    func normalizePrice() -> String{
+        return String(format: "%.2f$", Double((self)) ?? "0.00$")
     }
     
-    func getNormalizedPercentage () -> String {
+    func normalizedPercentage() -> String {
         return "\(self)" + "%"
     }
 }

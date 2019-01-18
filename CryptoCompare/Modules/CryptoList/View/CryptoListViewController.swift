@@ -22,12 +22,24 @@ class CryptoListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
+        configureView()
         setupViewModel()
+        requestData()
+    }
+    
+    func configureView (){
+        self.title = "Market"
+        configureTableView()
     }
     
     func configureTableView(){
         tableView.register(UINib(nibName: "CryptoListTableViewCell", bundle: nil), forCellReuseIdentifier: "CryptoListTableViewCell")
+    }
+    
+    func requestData () {
+        //Request data
+        guard let vm = viewModel else {return}
+        vm.requestData()
     }
     
     func setupViewModel() {
@@ -53,9 +65,6 @@ class CryptoListViewController: UIViewController {
                 break
             }
         }).disposed(by: disposeBag)
-        
-        //Request data
-        vm.requestData()
         
         //Manage error view
         errorViewController.reloadDataAction.asObservable()
